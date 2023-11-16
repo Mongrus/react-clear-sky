@@ -1,0 +1,35 @@
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+// Mixins
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 600px)
+            @content
+         
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1240px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
+
+// Адаптив на Rem
+html
+    font-size: 62.5%
+    @include respond (tab-port)
+        font-size: 56.25%
+    @include respond (tab-land)
+        font-size: 50%
+    @include respond (phone)
+        font-size: 30%
+    @include respond (big-screen)
+        font-size: 75%

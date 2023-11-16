@@ -1,0 +1,64 @@
+.sectionFour
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 70vh
+    background: linear-gradient(to right, #4b6cb7, #182848)
+    animation: 1s ease animCreate forwards
+
+.sectionFourNone
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 70vh
+    background: linear-gradient(to right, #4b6cb7, #182848)
+    animation: 1s ease animDelete forwards
+
+.divInfo
+    background: rgba(0, 0, 0, 0.59)
+    border-radius: 16px
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(2px)
+    -webkit-backdrop-filter: blur(2px)
+    border: 1px solid rgba(0, 0, 0, 0.34)
+    width: 80rem
+    height: 30rem
+    padding: 2rem
+    color: white
+    text-align: center
+    h2
+        font-size: 3rem
+        padding: 2rem
+    h3
+        font-size: 3.5rem
+        padding: 2rem
+        display: flex
+        justify-content: center
+        align-items: center
+        
+
+.spinner
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    h2
+        font-size: 3rem
+        color: white
+        text-shadow: .2rem .2rem .1rem black
+
+// Анимации секции
+@keyframes animDelete
+    0%
+        opacity: 1
+        
+    100%
+        opacity: 0
+        
+@keyframes animCreate
+    0%
+        opacity: 0
+    100%
+        opacity: 1

@@ -1,0 +1,76 @@
+.sectionThree
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 90vh
+    background: url('https://wallpapers.net/web/wallpapers/spectrum-of-the-colorful-sky-wallpaper-for-desktop-mobiles/2880x1800.jpg')
+    background-size: 100%
+    background-attachment: fixed
+    animation: 1s ease animCreate forwards
+
+.sectionThreeNone
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 90vh
+    background: url('https://wallpapers.net/web/wallpapers/spectrum-of-the-colorful-sky-wallpaper-for-desktop-mobiles/2880x1800.jpg')
+    background-size: 100%
+    background-attachment: fixed
+    animation: 1s ease animDelete forwards
+
+
+.divInfo 
+    background: rgba(0, 0, 0, 0.24)
+    border-radius: 16px
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(3.2px)
+    -webkit-backdrop-filter: blur(3.2px)
+    border: 1px solid rgba(0, 0, 0, 0.34)
+    box-shadow: 1rem 1rem 3rem black
+    width: 80rem
+    height: 50rem
+    color: white
+    text-shadow: .3rem 0rem .7rem black
+    text-align: center
+    padding: 2rem
+    h2
+        font-size: 4rem
+        padding: 2rem
+    h3
+        font-size: 3rem
+        padding: 2rem
+
+.spinner
+    background: rgba(0, 0, 0, 0.24)
+    border-radius: 16px
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(3.2px)
+    -webkit-backdrop-filter: blur(3.2px)
+    border: 1px solid rgba(0, 0, 0, 0.34)
+    box-shadow: 1rem 1rem 3rem black
+    width: 80rem
+    height: 50rem
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    h2
+        font-size: 3rem
+        color: white
+        text-shadow: .2rem .2rem .1rem black
+
+// Анимации секции
+@keyframes animDelete
+    0%
+        opacity: 1
+        
+    100%
+        opacity: 0
+        
+@keyframes animCreate
+    0%
+        opacity: 0
+    100%
+        opacity: 1

@@ -1,0 +1,136 @@
+.hamburger
+    position: fixed
+    top: 3rem
+    left: 3rem
+    width: 5rem
+    height: 5rem
+    opacity: 0
+    z-index: 99
+    
+.buttonHamburger
+    position: fixed
+    margin-top: 2.3rem
+    height: .1rem
+    width: 5rem
+    color: black
+    border-radius: .3rem 
+    border: .3rem solid black
+    top: 3rem
+    left: 3rem
+    z-index: 98
+    &::after
+        transform: translate(-.3rem, -2rem)
+        transition: .3s
+        display: block
+        content: ''
+        width: 5rem
+        height: .1rem
+        color: black
+        border-radius: .3rem 
+        border: .3rem solid black
+    &::before
+        transform: translate(-.3rem, .8rem)
+        transition: .3s
+        display: block
+        content: ''
+        width: 5rem
+        height: .1rem
+        color: black
+        border-radius: .3rem
+        border: .3rem solid black
+
+// Ищет вложенный класс после +
+.hamburger:checked + .buttonHamburgerContainer .buttonHamburger
+    border: none
+    &::after
+        transform: rotate(45deg) translate(-.5rem, -.5rem)
+        transition: .3s
+    &::before
+        transition: .3s
+        transform: rotate(-45deg) translate(.1rem, 0rem)
+    
+
+
+.hamburgerMenu
+    display: none
+    position: fixed
+    background-color: DarkCyan
+    justify-content: center
+    align-items: center
+    height: 100vh
+    width: 100%
+    z-index: 95
+    a
+        text-decoration: none
+        position: relative
+        color: black
+        z-index: 99
+    h2
+        font-size: 4rem
+        padding-bottom: 3rem
+    ul
+        padding-bottom: 10rem
+    li
+        font-size: 4rem
+        padding: .1rem
+        list-style-type: none
+        position: relative
+        text-align: center
+        cursor: pointer
+        z-index: 97
+        &::before
+            position: absolute
+            left: -.5rem
+            top: 0
+            display: block
+            content: ''
+            width: .1rem
+            height: 4rem
+            background-color: Crimson
+            opacity: 0
+            z-index: 96
+        &:hover
+            &::before    
+                width: 30.5rem
+                height: 4.4rem
+                opacity: 1
+                transition: .5s
+            a
+                color: White
+
+.runningString
+    background-color: black
+    height: 5rem
+    font-size: 3rem
+    color: white
+    overflow: hidden
+    text-align: center
+    p
+        padding-top: .5rem
+        width: 110vw
+        animation: 30s linear animRunStr infinite
+        &:hover
+            -webkit-animation-play-state: paused
+    a
+        color: Crimson
+
+
+// Ищет класс после ~
+.hamburger:checked ~ .hamburgerMenu
+    animation: 1s ease animHamb forwards
+    display: flex
+    flex-direction: column
+
+// Анимация гамбургер
+@keyframes animHamb
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+// Анимация бегущая-строка
+@keyframes animRunStr
+    0%
+        transform: translateX(140rem)
+    100%
+        transform: translateX(-140rem)

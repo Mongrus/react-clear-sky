@@ -1,0 +1,67 @@
+.sectionTwo 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 90vh
+    background: linear-gradient(to right, #614385, #516395)
+    animation: 1s ease animCreate forwards
+
+.sectionTwoNone
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 90vh
+    background: linear-gradient(to right, #614385, #516395)
+    animation: 1s ease animDelete forwards
+
+.city
+    width: 8rem
+    height: 8rem
+
+.divTemp
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100rem
+    height: 40rem
+    background: rgba(0, 0, 0, 0.59)
+    border-radius: 16px
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(2px)
+    -webkit-backdrop-filter: blur(2px)
+    border: 1px solid rgba(0, 0, 0, 0.34)
+    text-align: center
+    color: white
+    h2
+        font-size: 4rem
+        padding: 3rem
+    h3
+        font-size: 3rem
+        padding: 3rem
+            
+
+.spinner
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    h2
+        font-size: 3rem
+        color: white
+        text-shadow: .2rem .2rem .1rem black
+
+// Анимации секции
+@keyframes animDelete
+    0%
+        opacity: 1
+        
+    100%
+        opacity: 0
+        
+@keyframes animCreate
+    0%
+        opacity: 0
+    100%
+        opacity: 1
