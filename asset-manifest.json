@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-clear-sky/static/css/main.6862d536.css",
+    "main.js": "/react-clear-sky/static/js/main.9155854d.js",
+    "index.html": "/react-clear-sky/index.html",
+    "main.6862d536.css.map": "/react-clear-sky/static/css/main.6862d536.css.map",
+    "main.9155854d.js.map": "/react-clear-sky/static/js/main.9155854d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6862d536.css",
+    "static/js/main.9155854d.js"
+  ]
+}
